@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot the Difference — Lantern Market, Koi Pond, Rooftop Observatory</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #14101f;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    display: block;
+    width: min(100vw, calc(100vh * 1280 / 720));
+    height: min(100vh, calc(100vw * 720 / 1280));
+    cursor: pointer;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720" aria-label="Spot the difference game"></canvas>
+<p class="visually-hidden" id="status">Spot the difference: two pictures side by side. Click a difference on either picture. Keys: 1, 2, 3 choose a level, H for a hint, P to pause, R to restart, M to mute.</p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
